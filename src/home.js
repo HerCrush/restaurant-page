@@ -1,4 +1,4 @@
-export default function loadPage() {
+export default function loadHome() {
     const header1 = document.createElement('h1');
     const header2 = document.createElement('h2');
     const image = document.createElement('img');
