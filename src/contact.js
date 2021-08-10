@@ -1,20 +1,53 @@
-const contactCard = (header, position, phone, email) => {    //THIS IS ALL WRONG!!!!
-    const card = createElement('div');
-    const dataList = document.createElement('ul');
-    const dataHeader = document.createElement('h3');
-    const phoneLi = document.createElement('li');
-    const emailLi = document.createElement('li');
-    
-    card.classList.add('card');
-    dataHeader.textContent = header;
-    phoneLi.textContent = phone;
-    emailLi.textContent = email;
+export default function loadContact() {
+    const contactDiv = document.createElement('div');
 
-    dataList.append(positionLi, phoneLi, emailLi);
-    card.append(nameHeader, dataList);
-    document.querySelector('#content').appendChild(card);
-}
+    const resDiv = document.createElement('div');
+    const resHeader = document.createElement('h3');
+    const resPhone = document.createElement('p');
+    const resEmail = document.createElement('p');
 
-export default function loadMenu() {
+    resDiv.classList.add('contactDiv');
+    resDiv.id = 'reserv';
+    resHeader.textContent = 'Reservations';
+    resPhone.textContent = 'Phone: 123-444-5678';
+    resEmail.textContent = 'E-mail: reservations@restaurant.com';
 
+    resDiv.append(resHeader, resPhone, resEmail);
+    contactDiv.appendChild(resDiv);
+
+    const busDiv = document.createElement('div');
+    const busHeader = document.createElement('h3');
+    const busPhone = document.createElement('p');
+    const busEmail = document.createElement('p');
+
+    busDiv.classList.add('contactDiv');
+    busDiv.id = 'busin';
+    busHeader.textContent = 'Business';
+    busPhone.textContent = 'Phone: 987-555-4321';
+    busEmail.textContent = 'E-mail: business@restaurant.com';
+
+    busDiv.append(busHeader, busPhone, busEmail);
+    contactDiv.appendChild(busDiv);
+
+    const socDiv = document.createElement('div');
+    const socHeader = document.createElement('h3');
+    const instaIcon = document.createElement('img');
+    const socInsta = document.createElement('a');
+    const faceIcon = document.createElement('img');
+    const socFace = document.createElement('a');
+
+    socDiv.classList.add('contactDiv');
+    socDiv.id = 'social';
+    socHeader.textContent = 'Social';
+    instaIcon.src = 'instagram-icon.png';
+    socInsta.textContent = 'https://www.instagram.com/restaurant/';
+    socInsta.href = 'https://www.instagram.com/restaurant/';
+    faceIcon.src = 'facebook-icon.png';
+    socFace.textContent = 'https://www.facebook.com/restaurant/';
+    socFace.href = 'https://www.facebook.com/restaurant/';
+
+    socDiv.append(socHeader, instaIcon, socInsta, faceIcon, socFace);
+    contactDiv.appendChild(socDiv);
+
+    document.querySelector('#content').appendChild(contactDiv);
 }
