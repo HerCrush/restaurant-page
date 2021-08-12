@@ -31,8 +31,10 @@ export default function loadContact() {
 
     const socDiv = document.createElement('div');
     const socHeader = document.createElement('h3');
+    const instaDiv = document.createElement('div');
     const instaIcon = document.createElement('img');
     const socInsta = document.createElement('a');
+    const faceDiv = document.createElement('div');
     const faceIcon = document.createElement('img');
     const socFace = document.createElement('a');
 
@@ -46,7 +48,9 @@ export default function loadContact() {
     socFace.textContent = 'https://www.facebook.com/restaurant/';
     socFace.href = 'https://www.facebook.com/restaurant/';
 
-    socDiv.append(socHeader, instaIcon, socInsta, faceIcon, socFace);
+    instaDiv.append(instaIcon, socInsta);
+    faceDiv.append(faceIcon, socFace);
+    socDiv.append(socHeader, instaDiv, faceDiv);
     contactDiv.appendChild(socDiv);
 
     document.querySelector('#content').appendChild(contactDiv);
