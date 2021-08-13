@@ -6,7 +6,7 @@ export default function loadContact() {
     const resPhone = document.createElement('p');
     const resEmail = document.createElement('p');
 
-    resDiv.classList.add('contactDiv');
+    resDiv.classList.add('contact_div');
     resDiv.id = 'reserv';
     resHeader.textContent = 'Reservations';
     resPhone.textContent = 'Phone: 123-444-5678';
@@ -20,7 +20,7 @@ export default function loadContact() {
     const busPhone = document.createElement('p');
     const busEmail = document.createElement('p');
 
-    busDiv.classList.add('contactDiv');
+    busDiv.classList.add('contact_div');
     busDiv.id = 'busin';
     busHeader.textContent = 'Business';
     busPhone.textContent = 'Phone: 987-555-4321';
@@ -38,7 +38,7 @@ export default function loadContact() {
     const faceIcon = document.createElement('img');
     const socFace = document.createElement('a');
 
-    socDiv.classList.add('contactDiv');
+    socDiv.classList.add('contact_div');
     socDiv.id = 'social';
     socHeader.textContent = 'Social';
     instaIcon.src = 'instagram-icon.png';

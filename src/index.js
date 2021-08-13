@@ -19,7 +19,16 @@ document.querySelector('body').prepend(nav);
 loadHome();
 
 function loadTab(e) {
+    const clicked = document.querySelector('.clicked');
+    if(clicked) {
+        clicked.classList.remove('clicked');
+        clicked.removeAttribute('disabled');
+    }
+
+    e.target.classList.add('clicked');
+
     document.querySelector('#content div').remove();
+
     switch(e.target.textContent) {
         case 'HOME':
             loadHome();
@@ -31,4 +40,6 @@ function loadTab(e) {
             loadContact();
             break;
     }
+
+    e.target.setAttribute('disabled', 'true');
 }
