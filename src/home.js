@@ -8,7 +8,7 @@ export default function loadHome() {
     homeDiv.id = 'home';
     header2.textContent = 'Come eat here pls';
     image.setAttribute('src', "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2019/06/25/15614775255199.jpg");
-    para1.textContent = "We've got lots of food come eat it, it's so good I promise";
+    para1.textContent = "We've got lots of food come eat it, it's so good I promise.";
     
     homeDiv.append(header2, image, para1);
     
