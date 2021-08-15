@@ -1,6 +1,19 @@
+@font-face {
+    font-family: "AlexBrush";
+    src: url("./alex-brush/AlexBrush-Regular.ttf");
+}
+
+@font-face {
+    font-family: "ElegantSans";
+    src: url("./elegant_sans/Elegant\ Sans\ Regular.ttf");
+}
+
 body {
-    background-color: gray;
+    background-color: rgb(22, 22, 22);
+    color: rgb(22, 22, 22);
     text-align: center;
+    font-family: "ElegantSans";
+    font-size: 24pt;
 }
 
 nav {
@@ -13,6 +26,7 @@ nav {
 }
 
 nav button {
+    color: crimson;
     height: auto;
     width: 2em;
     padding: 30px 30px 30px 60px;
@@ -29,7 +43,7 @@ nav button:hover, .clicked{
 }
 
 main {
-    background-color: blanchedalmond;
+    background-color: floralwhite;
     padding: 30px 100px 100px 100px;
     width: 50vw;
     display: flex;
@@ -39,24 +53,30 @@ main {
 }
 
 h1 {
-    font-size: 64pt;
-    margin-bottom: 50px;
+    color: crimson;
+    font-family: "AlexBrush";
+    font-size: 3.3em;
+    font-weight: bold;
+    margin: 50px 0px;
 }
 
 h2 {
-    font-size: 36pt;
+    font-size: 2.5em;
+    margin-top: 30px;
 }
 
 h3 {
-    font-size: 24pt;
-    margin-top: 80px;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 2em;
 }
 
 #soup, #pizza, #risotto, #chocotorta, #home img, #home p {
     margin: 50px 0px;
 }
 
-#pizza, #risotto, #chocotorta {
+#soup, #pizza, #risotto, #chocotorta {
+    border: double black 10px;
     height: 356px;
     width: 535px;
     object-fit: cover;
